@@ -1,0 +1,77 @@
+/*                     NAVBAR                     */
+
+#logoComp {
+    width: 187.5px;
+    height: 41.5px;
+}
+
+a {
+    list-style: none;
+    color:aqua;
+}
+.nav-tam {
+    min-height: 75px !important;
+    background-color: #0094a8;
+}
+
+.nav-tam>li>a:hover{
+    color:aqua !important;
+}
+
+.nav-pad {
+    padding-top: 12.5px !important;
+}
+
+.nav li a:hover {
+    background-color: transparent;
+}
+
+.nav-colors {
+    color: white !important;
+}
+
+.navbar-borda {
+    border: 0;
+    border-radius: 0;
+}
+
+.menu-pad {
+    margin-top: 19px !important; 
+}
+
+.a-cores {
+    color: white;
+    background-color: #0094a8 !important;
+    border: 0;
+}
+
+.a-cores a {
+    color: white !important;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+ul li a:hover {
+    text-decoration: none;
+    color: cyan;
+}
+
+ul li a:focus {
+    background-color: transparent;
+}
+
+/*                     OUTROS                     */
+
+body {
+    background-color: #f6f6f6;
+}
+
+
+
+#divCadastrarErrorText {
+    text-align: center;
+}
