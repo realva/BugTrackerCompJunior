@@ -1,0 +1,43 @@
+/*Comp Júnior/Grupo 2*/
+/*Projeto a ser realizado para o PS 2016.1/Etapa 3*/
+html, body {
+  height: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+section {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+ }
+ nav {
+  background-color: #1793A6;
+}
+
+
+
+#sectionCadastro form {
+  width: 60% !important;
+  display: :table;
+  margin: auto;
+}
+#sectionCadastro h2 {
+	padding-bottom: 50px; 
+	font-size: 40px;
+}
+#sectionCadastro button{
+  background-color: #1793A6;
+}
+
+footer {
+
+  padding-top: 30px;
+  padding-bottom: 50px;
+  height: 75px;
+  background-color: #1793A6;
+  text-align: center;
+  border-bottom: 5px; 
+  color: white;
+}
