@@ -17,7 +17,6 @@ section {
 }
 
 
-
 #sectionCadastro form {
   width: 60% !important;
   display: :table;
@@ -31,6 +30,28 @@ section {
   background-color: #1793A6;
 }
 
+#buttonError:focus{
+  background: #8CBE42; 
+}
+#buttonProject:focus{
+  background: #8CBE42;
+}
+#left{
+  display:none;
+}
+#left form {
+  width: 60% !important;
+  display: :table;
+  margin: auto;
+}
+#right{
+  display:none;
+}
+#right form {
+  width: 60% !important;
+  display: :table;
+  margin: auto;
+}
 footer {
 
   padding-top: 30px;
