@@ -12,6 +12,8 @@
         <link href="css/mycss.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 
     </head>
@@ -36,47 +38,53 @@
 
         <!--Section para cadastro de erros.-->
         <section id="sectionCadastro" class="container-fluid">
-            <h2 class="intro-text text-center">
+            <h2 class="intro-text text-center cor">
                 Cadastrar Erro
             </h2>
             <form role="form" name="errorform" id="errorform">
                 <div class="row">
                 	<!--Insere o nome do erro-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Nome do Erro</label>
-                        <input type="text" name="nameError" id="nameError" class="form-control">
+                    <div class="form-group col-lg-12 grupo">
+                        
+                        <input type="text" name="nameError" id="nameError" class="imputtext">
+                        <label for="nome" class=" titulo control-label">Nome do Erro</label>
+                        <span class="bar"></span>
                     </div>
                     <!--Selecionar o tipo do erro-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Tipo de Erro</label>
-                      <select class="form-control" id="typeError">
-                        <option disabled selected value>  Selecione o tipo do erro  </option>
-                        <option>Interface</option>
-                        <option>Erro de lógica</option>
-                        <option>Erro de compilação</option>
-                        <option>Erro de execução</option>
+                    <div class="form-group col-lg-12 grupo">
+                      
+                      <select class="imputtext" id="typeError">
+                        <option disabled selected value>  </option>
+                        <option class="op">Interface</option>
+                        <option class="op">Erro de lógica</option>
+                        <option class="op">Erro de compilação</option>
+                        <option class="op">Erro de execução</option>
                       </select>
+                      <label for="sel1" class="titulo control-label">Tipo de Erro</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Selecionar o tipo de projeto em que o erro está vinculado-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Projeto</label>
-                      <select class="form-control" id="typeProject">
-                        <option disabled selected value> Selecione o projeto  </option>
-                        <option>Comp Android</option>
-                        <option>Comp Web</option>
-                        <option>Fórum de Química</option>
-                        <option>Ponto eletrônico Comp</option>
+                    <div class="form-group col-lg-12 grupo">
+                      <select class="imputtext" id="typeProject">
+                        <option disabled selected value>  </option>
+                        <option class="op">Comp Android</option>
+                        <option class="op">Comp Web</option>
+                        <option class="op">Fórum de Química</option>
+                        <option class="op">Ponto eletrônico Comp</option>
                       </select>
+                      <label for="sel1" class="titulo control-label">Projeto</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Faz uma breve descrição a cerca do erro-->
                     <div class="clearfix"></div>
-                    <div class="form-group col-lg-12">
-                        <label for="mensagem" class="control-label">Descrição do Erro</label>
-                        <textarea class="form-control" rows="6" name="mensagemErro" id="mensagemErro"></textarea>
+                    <div class="form-group col-lg-12 grupo">
+                        <textarea class="imputtext" rows="6" name="mensagemErro" id="mensagemErro"></textarea>
+                        <label for="mensagem" class="control-label titulo">Descrição do Erro</label>
+                        <span class="bar"></span>
                     </div>
                     <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Cadastrar</button>
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Cancelar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Cadastrar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Cancelar</button>
                     </div>
                 </div>
 

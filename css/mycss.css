@@ -1,10 +1,13 @@
 /*Comp Júnior/Grupo 2*/
 /*Projeto a ser realizado para o PS 2016.1/Etapa 3*/
+
 html, body {
   height: 100%;
   margin: 0;
   border: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #f5f5f5 !important;
 }
 
 section {
@@ -15,7 +18,9 @@ section {
  nav {
   background-color: #1793A6;
 }
-
+.cor{
+  color: #1793A6;
+}
 
 #sectionCadastro form {
   width: 60% !important;
@@ -52,6 +57,162 @@ section {
   display: :table;
   margin: auto;
 }
+
+.grupo{
+  position: relative;
+  padding-bottom: 1.5em;
+
+}
+
+.titulo{
+  color: #b7b7b7;
+  font-size: 15px;
+  font-weight: normal !important;
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+
+.imputtext{
+  color: #909090;
+  font-size: 15px;  
+  padding: 10px 0 10px 0;
+  display: block;
+  width: 100%;
+  outline: none;  
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
+  background-color: #f5f5f5;
+}
+
+.bar{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before, .bar:after{
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: -1px; 
+  position: absolute;
+  background-color: #1793A6;
+  transition: 0.2s ease all;
+}
+
+.bar:before{
+  left: 50%;
+}
+.bar:after{
+  right: 50%;
+}
+
+.imputtext:focus ~ .titulo,
+.imputtext.used ~ .titulo{
+  top: -20px;
+  font-size: 13px;
+  color: #1793a6;
+  font-weight: bold;
+}
+
+.imputtext:focus ~ .bar:before,
+.imputtext:focus ~ .bar:after{
+  width: 50%;
+}
+
+.op{
+  z-index: 100;
+}
+
+
+
+button{
+  position: relative;
+  min-width: 88px !important;
+  padding: 12px 20px !important;
+  outline: none !important;
+  border: none ;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 3px !important;
+
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12) 0 1px 2px 0 rgba(0,0,0,0.24);
+  -o-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12) 0 1px 2px 0 rgba(0,0,0,0.24);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12) 0 1px 2px 0 rgba(0,0,0,0.24);
+  -ms-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12) 0 1px 2px 0 rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12) 0 1px 2px 0 rgba(0,0,0,0.24);    
+
+}
+.rp{
+  border-color: #cdcdcd !important;
+}
+
+
+.rp:hover{
+  background-color: #cc1f3b !important;
+  border-color: #cc1f3b !important;
+  opacity: 0.9 !important;
+}
+
+.rp:focus, .rp:active{
+  background-color: #cc1f3b !important;
+  opacity: 1 !important;
+  border-color: #cc1f3b !important;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15) 0 3px 6px 0 rgba(0,0,0,0.23) !important;
+  -o-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15) 0 3px 6px 0 rgba(0,0,0,0.23);
+  -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15) 0 3px 6px 0 rgba(0,0,0,0.23);
+  -ms-box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15) 0 3px 6px 0 rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15) 0 3px 6px 0 rgba(0,0,0,0.23) !important; 
+}
+
+.ripple{
+  position: absolute;
+  background: rgba(255,255,255,0.50);
+  pointer-events: none;
+  border-radius: 100%;
+
+  -webkit-transform: scale(0);
+  -o-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.ripple.show{
+  -webkit-animation: ripple .45s ease-out;
+  animation: ripple .45s ease-out;
+}
+
+@-webkit-keyframes ripple{
+  to{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple{
+  to{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 footer {
 
   padding-top: 30px;
