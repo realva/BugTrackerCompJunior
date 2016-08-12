@@ -12,6 +12,8 @@
         <link href="css/mycss.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <nav class="navbar navbar-borda nav-tam ">
@@ -48,46 +50,55 @@
             <form role="form" name="errorsearch" id="errorsearch">
                 <div class="row">
                     <!--Procura pelo nome do erro-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Pequise pelo nome do erro</label>
-                        <input type="text" name="nameError" id="nameError" class="form-control">
+                    <div class="form-group col-lg-12 grupo">
+                        <input type="text" name="nameError" id="nameError" class="imputtext">
+                        <label for="nome" class="control-label titulo">Pequise pelo nome do erro</label>
+                        <span class="bar"></span>
                     </div>
                     <!--Seleciona o primeiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value>  Filtro erro 1  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Seleciona o segundo filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro erro 2  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Seleciona o terceiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro erro 3  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
+                    <div class="">
+                        <div class="form-group col-lg-4 grupo">
+                          
+                          <select class="imputtext" id="#">
+                            <option disabled selected value>   </option>
+                            <option>Escolha de filtro 01</option>
+                            <option>Escolha de filtro 02</option>
+                            <option>Escolha de filtro 03</option>
+                            <option>Escolha de filtro 04</option>
+                          </select>
+                          <label for="sel1" class="titulo">Filtro</label>
+                          <span class="bar"></span>
+                        </div>
+                        <!--Seleciona o segundo filtro-->
+                        <div class="form-group col-lg-4 grupo">
+                          
+                          <select class="imputtext" id="#">
+                            <option disabled selected value>   </option>
+                            <option>Escolha de filtro 01</option>
+                            <option>Escolha de filtro 02</option>
+                            <option>Escolha de filtro 03</option>
+                            <option>Escolha de filtro 04</option>
+                          </select>
+                          <label for="sel1" class="titulo">Filtro</label>
+                          <span class="bar"></span>
+                        </div>
+                        <!--Seleciona o terceiro filtro-->
+                        <div class="form-group col-lg-4 grupo">
+                          
+                          <select class="imputtext" id="#">
+                            <option disabled selected value>   </option>
+                            <option>Escolha de filtro 01</option>
+                            <option>Escolha de filtro 02</option>
+                            <option>Escolha de filtro 03</option>
+                            <option>Escolha de filtro 04</option>
+                          </select>
+                          <label for="sel1" class="titulo">Filtro</label>
+                          <span class="bar"></span>
+                        </div>
+                    </div>    
                     <!--Botão de Pesquisa-->
                     <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Buscar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Buscar</button>
                     </div>
                 </div>
             </form>
@@ -97,35 +108,41 @@
             <form role="form" name="projectsearch" id="projectsearch">
                 <div class="row">
                     <!--Busca pelo nome do projeto-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Pequise pelo nome do projeto</label>
-                        <input type="text" name="nameProject" id="nameProject" class="form-control">
+                    <div class="form-group col-lg-12 grupo">
+                        
+                        <input type="text" name="nameProject" id="nameProject" class="imputtext">
+                        <label for="nome" class="control-label titulo">Pequise pelo nome do projeto</label>
+                        <span class="bar"></span>
                     </div>
                     <!--Seleciona o primeiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value>  Filtro Projeto 1  </option>
+                    <div class="form-group col-lg-4 grupo">
+                      
+                      <select class="imputtext" id="#">
+                        <option disabled selected value>    </option>
                         <option>Escolha de filtro 01</option>
                         <option>Escolha de filtro 02</option>
                         <option>Escolha de filtro 03</option>
                         <option>Escolha de filtro 04</option>
                       </select>
+                      <label for="sel1" class="titulo">Filtro</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Seleciona o segundo filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro Projeto 2  </option>
+                    <div class="form-group col-lg-4 grupo">
+                      
+                      <select class="imputtext" id="#">
+                        <option disabled selected value>   </option>
                         <option>Escolha de filtro 01</option>
                         <option>Escolha de filtro 02</option>
                         <option>Escolha de filtro 03</option>
                         <option>Escolha de filtro 04</option>
                       </select>
+                      <label for="sel1" class="titulo">Filtro</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Botão de Pesquisa-->
                     <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Buscar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Buscar</button>
                     </div>
                 </div>
             </form>

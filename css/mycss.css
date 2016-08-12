@@ -122,9 +122,6 @@ section {
   width: 50%;
 }
 
-.op{
-  z-index: 100;
-}
 
 
 
@@ -133,6 +130,7 @@ button{
   min-width: 88px !important;
   padding: 12px 20px !important;
   outline: none !important;
+  background-color: #1793A6 !important;
   border: none ;
   cursor: pointer;
   overflow: hidden;

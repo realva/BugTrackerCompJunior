@@ -12,6 +12,8 @@
         <link href="css/mycss.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 
     </head>
@@ -36,46 +38,54 @@
 
         <!--Section para cadastro de projetos.-->
         <section id="sectionCadastro" class="container-fluid">
-            <h2 class="intro-text text-center">
+            <h2 class="intro-text text-center cor">
                 Cadastrar Projeto
             </h2>
             <form role="form" name="projectform" id="projectform">
                 <div class="row">
                 	<!--Insere o nome do projeto-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Nome do Projeto</label>
-                        <input type="text" name="nameProject" id="nameProject" class="form-control">
+                    <div class="form-group col-lg-12 grupo">
+                       
+                        <input type="text" name="nameProject" id="nameProject" class="imputtext">
+                        <label for="nome" class="titulo control-label">Nome do Projeto</label> 
+                        <span class="bar"></span>
                     </div>
                     <!--Selecionar a plataforma-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Plataforma</label>
-                      <select class="form-control" id="platform">
-                        <option disabled selected value>  Selecione a plataforma  </option>
+                    <div class="form-group col-lg-12 grupo">
+                      
+                      <select class="imputtext" id="platform">
+                        <option disabled selected value>  </option>
                         <option>Android</option>
                         <option>WebSite</option>
                         <option>Desktop</option>
                       </select>
+                      <label for="sel1" class="titulo">Plataforma</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Selecionar o membro da equipe que vai estar vinculado àquele projeto-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Equipe</label>
-                      <select class="form-control" id="member">
-                        <option disabled selected value> Selecione o membro da equipe </option>
+                    <div class="form-group col-lg-12 grupo">
+                      
+                      <select class="imputtext" id="member">
+                        <option disabled selected value> </option>
                         <option>Matheus Nogueira</option>
                         <option>Lucas de Paula</option>
                         <option>Arlen Mateus Mendes</option>
                         <option>Lucas Lopes Garcia</option>
                       </select>
+                      <label for="sel1" class="titulo">Equipe</label>
+                      <span class="bar"></span>
                     </div>
                     <!--Faz uma breve descrição a cerca do projeto-->
                     <div class="clearfix"></div>
-                    <div class="form-group col-lg-12">
-                        <label for="mensagem" class="control-label">Descrição do Projeto</label>
-                        <textarea class="form-control" rows="6" name="mensagemProjeto" id="mensagemProjeto"></textarea>
+                    <div class="form-group col-lg-12 grupo">
+                        
+                        <textarea class="imputtext" rows="6" name="mensagemProjeto" id="mensagemProjeto"></textarea>
+                        <label for="mensagem" class="titulo control-label">Descrição do Projeto</label>
+                        <span class="bar"></span>
                     </div>
                     <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Cadastrar</button>
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Cancelar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Cadastrar</button>
+                        <button type="button" class="btn btn-primary rp" onclick="enviar()" >Cancelar</button>
                     </div>
                 </div>
 
