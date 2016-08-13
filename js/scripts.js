@@ -19,7 +19,7 @@ $(function(){
             // A sgunda coluna (começa do zero) 
             1: { 
                 // Desativa a ordenação para essa coluna 
-                sorter: false 
+                sorter: 'string' 
             },
 			4: {
                 // Ativa o parser de data na coluna 4 (começa do 0) 
