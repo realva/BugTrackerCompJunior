@@ -3,47 +3,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tela Principal</title>
-        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css" >
-        <link rel="stylesheet" href="css/newstyle.css">
+        <meta charset="utf-8">
+        <title>CompJúnior BugTracker | Home</title>
+        <link rel="icon" href="imagens/joaninha.png">
+        <meta name="description" content="Controlador de erros da CompJr">
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
         
-        <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+        <!--Referência para a folha de estilo base a ser usada-->
+        <link href="css/mycss.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        
+        
     </head>
     <body>
-        <nav class="navbar navbar-borda nav-tam">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="nav-widith navbar-header">
-                    <div id="btnnav" class="dropdown">
-                        <button type="button" class="bt btn btn-default">Home</button>
-                        <button class="bt btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Cadastrar
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Erros</a></li>
-                                <li><a href="#">Projetos</a></li>
-                            </ul>
-                        <button type="button" class="bt btn btn-default">Buscar</button>
-                    </div>
-                    <a class="navbar-brand" href="index.html">
-                        <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbranca.png" >
-                    </a>
-                </div>
+      <nav class="navbar navbar-borda nav-tam ">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+             <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span  class="menu-bar glyphicon glyphicon-menu-hamburger"></span>
+                
+              </button>
+                <a class="navbar-brand" href="index.html">
+                    <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbrancaBugTracker.png" >
+                </a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav nav-pad navbar-nav navbar-right">
+                <li><a href="index.html" class="link-menu">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle a-cores" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
+                  <ul class="dropdown-menu a-cores">
+                    <li><a href="addError.html">Erros</a></li>
+                    <li><a href="addProject.html">Projetos</a></li>
+                  </ul>
+                </li>
+                <li><a href="search.html">Pesquisar</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
         </nav>
         <div class="conteudo">
-            <div class="container-fluid text-center">
-                <h2 id="titulo">Bem vindo ao bugtracker da Comp Junior...</h2>
-                <p id="texto">...está plataforma tem a intenção de criar uma interação entre testers e desenvolvedores da empresa, afim de registrar os bugs e suas respectivas soluções otimizando a re-utilização de dados dos projetos.</p>
-                <a href="addError.html" class="btn bt btn-primary btn-azulcomp btn-lg">Cadastrar Erro</a>
-                <a href="addProject.html" class="btn bt btn-primary btn-azulcomp btn-lg">Cadastrar Projeto</a>
-                <a href="search.html" class="btn bt btn-primary btn-azulcomp btn-lg">Buscar</a>
+            <div class="container-fluid text-center col-lg-8 col-lg-offset-2">
+                <h2 id="titulo">Bem-vindo ao CompJúnior BugTracker,</h2>
+                <p id="texto">Esta plataforma tem a intenção de criar uma interação entre testers e desenvolvedores da empresa, afim de registrar os bugs e suas respectivas soluções otimizando a reutilização de dados dos projetos.</p>
+                <button onclick="window.location.href='addError.html'" class="btn  btn-primary rp btn-grande">Cadastrar Erro</a></button>
+                <button onclick="window.location.href='addProject.html'" class="btn btn-primary rp btn-grande">Cadastrar Projeto</button>
+                <button onclick="window.location.href='search.html'" class="btn btn-primary rp btn-grande">Buscar</button>
             </div>
         </div>
+        <footer>
+        <img src="imagens/LogoCompbranca.png">
+      <p>Copyright &copy; Grupo 2 PS2016.1</p>
+    </footer>
     </body>
 </html>
 

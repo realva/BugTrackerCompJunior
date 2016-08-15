@@ -1,6 +1,5 @@
 /*Comp Júnior/Grupo 2*/
 /*Projeto a ser realizado para o PS 2016.1/Etapa 3*/
-
 html, body {
   height: 100%;
   margin: 0;
@@ -12,15 +11,119 @@ html, body {
 
 section {
   height: auto;
-  min-height: 100%;
+  margin-bottom: 5em;
   width: 100%;
  }
  nav {
   background-color: #1793A6;
 }
-.cor{
-  color: #1793A6;
+
+/*                     NAVBAR                     */
+
+
+
+#logoComp {
+
+    width: 252.5px;
+    height: 61.5px;
 }
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color:#fff;
+}
+a:focus,
+a:active {
+    text-decoration: none;
+    font-weight: 500;
+    color:#fff;
+}
+.nav-tam {
+    min-height: 75px !important;
+    height: 120px;
+    
+}
+
+.nav-tam>li>a:hover{
+    color:#F2C716 !important;
+}
+
+.nav-pad {
+    padding-top: 33.5px !important;
+}
+
+.nav li a:hover {
+    background-color: transparent;
+    color:#F2C716  !important;
+}
+
+.nav-colors {
+    color: white !important;
+}
+
+.navbar-borda {
+    border: 0;
+    border-radius: 0;
+}
+
+.menu-pad {
+    margin-top: 33.5px !important;
+
+}
+
+.a-cores {
+    color: white;
+    background-color: #0094a8 !important;
+    border: 0;
+}
+
+.a-cores a {
+    color: white !important;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+ul li a:hover,
+ul li a:active {
+    text-decoration: none;
+    color: #cc1f3b;
+}
+
+ul li a:focus {
+    background-color: transparent;
+}
+
+.menu-bar{
+  color: #fff;
+
+}
+
+/*                     OUTROS                     */
+
+body {
+    background-color: #f6f6f6;
+}
+
+.switch{
+  display: flex;
+  justify-content: center;
+  margin: 5em auto;
+  
+}
+.switch-li{
+  list-style-type: none !important;
+}
+
+
+#divCadastrarErrorText {
+    text-align: center;
+}
+
 
 #sectionCadastro form {
   width: 60% !important;
@@ -58,70 +161,42 @@ section {
   margin: auto;
 }
 
-.grupo{
-  position: relative;
-  padding-bottom: 1.5em;
 
+.btn-grande{
+  width: 250px;
+  height: 70px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+.conteudo{
+  padding: 0 10%;
+  height: 500px;
 }
 
-.titulo{
-  color: #b7b7b7;
+#titulo{
+  margin-bottom: 50px;
+}
+
+#texto{
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+
+#btnnav{
   font-size: 15px;
-  font-weight: normal !important;
-  position: absolute;
-  pointer-events: none;
-  top: 10px;
-  transition: 0.2s ease all;
+    padding: 1px;
+    margin-top: 20px;
+  float: right !important;
 }
 
-.imputtext{
-  color: #909090;
-  font-size: 15px;  
-  padding: 10px 0 10px 0;
-  display: block;
-  width: 100%;
-  outline: none;  
-  border: none;
-  border-bottom: 1px solid #b7b7b7;
-  background-color: #f5f5f5;
+.bt:hover{
+  color: #000;
+  background-color: #F2C716;
 }
-
-.bar{
-  position: relative;
-  display: block;
+.nav-widith{
   width: 100%;
 }
-
-.bar:before, .bar:after{
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: -1px; 
-  position: absolute;
-  background-color: #1793A6;
-  transition: 0.2s ease all;
-}
-
-.bar:before{
-  left: 50%;
-}
-.bar:after{
-  right: 50%;
-}
-
-.imputtext:focus ~ .titulo,
-.imputtext.used ~ .titulo{
-  top: -20px;
-  font-size: 13px;
-  color: #1793a6;
-  font-weight: bold;
-}
-
-.imputtext:focus ~ .bar:before,
-.imputtext:focus ~ .bar:after{
-  width: 50%;
-}
-
 
 
 
@@ -211,13 +286,19 @@ button{
   }
 }
 
-footer {
 
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding-top: 30px;
-  padding-bottom: 50px;
-  height: 75px;
-  background-color: #1793A6;
+  padding-bottom: 30px;
+  background-color: #424242;
   text-align: center;
   border-bottom: 5px; 
   color: white;
+}
+footer p{
+  padding-top: 2em;
 }

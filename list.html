@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>CompJúnior BugTracker | Listagem</title>
+        <link rel="icon" href="imagens/joaninha.png">
+        <meta name="description" content="Controlador de erros da CompJr">
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/mycss.css" >
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <nav class="navbar navbar-borda nav-tam ">
+          <div class="container-fluid ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span  class="menu-bar glyphicon glyphicon-menu-hamburger"></span>
+                
+              </button>
+                <a class="navbar-brand " href="index.html">
+                    <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbrancaBugTracker.png" >
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav nav-pad navbar-nav navbar-right">
+                <li><a href="index.html" class="link-menu">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle a-cores" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
+                  <ul class="dropdown-menu a-cores">
+                    <li><a href="addError.html">Erros</a></li>
+                    <li><a href="addProject.html">Projetos</a></li>
+                  </ul>
+                </li>
+                <li><a href="search.html">Pesquisar</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class = "page-header text-center">
+            <h1>Lista de Erros</h1>
+        </div>
+
+        <div = class = "container">
+            <div class = "row">
+            <div class = "col-md-12">
+                <table class = "table table-striped table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome do Erro</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Erro de Lógica</td>
+                            <td>08/08/2016</td>
+                            <td>
+                                <img src="imagens/checkOK.svg" width = "24px" height = "24px" alt = "Icons made by Freepik http://www.flaticon.com/free-icon/verified-checkbox-symbol_48742">
+                                Corrigido
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>2</td>
+                            <td>Erro de Compilação</td>
+                            <td>11/08/2016</td>
+                            <td>
+                                <img src="imagens/checkPendente.svg" width = "24px" height = "24px" alt ="Icons made by Google http://www.flaticon.com/free-icon/blank-square_61218">
+                                Pendente
+                            </td>
+
+                        </tr>
+                         <tr>
+                            <td>3</td>
+                            <td>Interface</td>
+                            <td>01/08/2016</td>
+                            <td>
+                                <img src="imagens/checkSemResposta.svg" width = "24px" height = "24px" alt ="Icons made by Plainicon http://www.flaticon.com/free-icon/square-crossed_79032">
+                                Espera
+                            </td>
+
+                        </tr>
+                         <tr>
+                            <td>4</td>
+                            <td>Gramatical</td>
+                            <td>10/08/2016</td>
+                            <td>
+                                <img src="imagens/checkOK.svg" width = "24px" height = "24px" alt = "Icons made by Freepik http://www.flaticon.com/free-icon/verified-checkbox-symbol_48742">
+                                Corrigido
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+<footer >
+        <img src="imagens/LogoCompbranca.png">
+      <p>Copyright &copy; Grupo 2 PS2016.1</p>
+    </footer>
+            
+    </body>
+</html>
