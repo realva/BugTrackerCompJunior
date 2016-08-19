@@ -237,6 +237,10 @@ button {
     font-size: 40px;
 }
 
+.form-control-feedback {
+    right: -12px;
+}
+
 
 /** Cadastrar-Erro FIM **/
 
