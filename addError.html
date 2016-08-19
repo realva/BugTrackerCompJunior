@@ -10,10 +10,8 @@
         <link rel="stylesheet" href="css/style.css" >
         <!--Referência para a folha de estilo base a ser usada-->
         <link href="css/mycss.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-
+        <!--Referência para o Sweetalert 2-->
+        <link href="css/sweetalert2.css" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-borda nav-tam ">
@@ -31,25 +29,23 @@
                 </a>
             </div>
         </nav>
-        
         <!-- FIM DA NAVBAR -->
-
         <!--Section para cadastro de erros.-->
         <section id="sectionCadastro" class="container-fluid">
             <h2 class="intro-text text-center">
                 Cadastrar Erro
             </h2>
-            <form role="form" name="errorform" id="errorform">
+            <form role="errorform" name="errorform" id="errorform">
                 <div class="row">
                 	<!--Insere o nome do erro-->
                     <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Nome do Erro</label>
+                        <label for="nameError" class="control-label">Nome do Erro</label>
                         <input type="text" name="nameError" id="nameError" class="form-control">
                     </div>
                     <!--Selecionar o tipo do erro-->
                     <div class="form-group col-lg-12">
-                      <label for="sel1">Tipo de Erro</label>
-                      <select class="form-control" id="typeError">
+                      <label for="typeError">Tipo de Erro</label>
+                      <select class="form-control" name="typeError" id="typeError">
                         <option disabled selected value>  Selecione o tipo do erro  </option>
                         <option>Interface</option>
                         <option>Erro de lógica</option>
@@ -59,8 +55,8 @@
                     </div>
                     <!--Selecionar o tipo de projeto em que o erro está vinculado-->
                     <div class="form-group col-lg-12">
-                      <label for="sel1">Projeto</label>
-                      <select class="form-control" id="typeProject">
+                      <label for="errorProject">Projeto</label>
+                      <select class="form-control" name="errorProject" id="errorProject">
                         <option disabled selected value> Selecione o projeto  </option>
                         <option>Comp Android</option>
                         <option>Comp Web</option>
@@ -71,21 +67,51 @@
                     <!--Faz uma breve descrição a cerca do erro-->
                     <div class="clearfix"></div>
                     <div class="form-group col-lg-12">
-                        <label for="mensagem" class="control-label">Descrição do Erro</label>
+                        <label for="mensagemErro" class="control-label">Descrição do Erro</label>
                         <textarea class="form-control" rows="6" name="mensagemErro" id="mensagemErro"></textarea>
                     </div>
                     <div class="form-group col-lg-12">
                         <button type="button" class="btn btn-primary" onclick="enviar()" >Cadastrar</button>
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="" >Cancelar</button>
                     </div>
                 </div>
 
             </form>
         </section>
-            
     </body>
     <!--Footer-->
 	<footer>
 	  <p>Copyright &copy; Grupo 2 PS2016.1</p>
 	</footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+    <script type="text/javascript" src="js/validarFormError.js"></script>
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+    
+    <script>
+        function enviar() {
+                   
+            var nomeErro = $("#nameError").val(); // nome do erro
+            var tipoErro = $("#typeError").val(); // tipo do erro
+            var erroProjeto = $("#errorProject").val(); // projeto no qual o erro está vinculado.
+            var mensagemErro = $("#mensagemErro").val(); // descricao do erro
+
+            if(nomeErro != "" && tipoErro != "" && erroProjeto != "" && mensagemErro != "") {
+
+                swal({
+                            title: 'O erro ' + nomeErro + ' foi cadastrado com sucesso',
+                            //text: 'Sucesso',
+                            type: 'success',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
+                        },function() {
+                             window.location.reload();
+                        }); 
+            }
+            else{
+                $("#errorform").submit(); // tenta o submit no form, com isso a validacao de campo é chamada automaticamente
+            }
+        }
+    </script>
 </html>
