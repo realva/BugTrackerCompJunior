@@ -2,111 +2,125 @@
 <!--Projeto a ser realizado para o PS 2016.1/Etapa 3-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>CompJúnior BugTracker | Cadastrar Projeto</title>
-        <link rel="icon" href="imagens/joaninha.png">
-        <meta name="description" content="Controlador de erros da CompJr">
-        <link rel="stylesheet" href="css/bootstrap.min.css" >
-        <!--Referência para a folha de estilo base a ser usada-->
-        <link href="css/mycss.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/js.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>CompJúnior BugTracker | Cadastrar Projeto</title>
+    <link rel="icon" href="imagens/joaninha.png">
+    <meta name="description" content="Controlador de erros da CompJr">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Referência para a folha de estilo base a ser usada-->
+    <link href="css/teste.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 
-    </head>
-    <body>
-        
-        
-         <nav class="navbar navbar-borda nav-tam ">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span  class="menu-bar glyphicon glyphicon-menu-hamburger"></span>
-                
-              </button>
-                <a class="navbar-brand" href="index.html">
-                    <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbrancaBugTracker.png" >
-                </a>
-            </div>
+</head>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav nav-pad navbar-nav navbar-right">
-                <li><a href="index.html" class="link-menu">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle a-cores" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
-                  <ul class="dropdown-menu a-cores">
-                    <li><a href="addError.html">Erros</a></li>
-                    <li><a href="addProject.html">Projetos</a></li>
-                  </ul>
-                </li>
-                <li><a href="search.html">Pesquisar</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-        
-                
-        <!-- FIM DA NAVBAR -->
+<body>
 
-        <!--Section para cadastro de projetos.-->
-        <section id="sectionCadastro" class="container-fluid">
-            <h2 class="intro-text text-center">
+    <!-- ALL-PAGE -->
+    <div id="myContain" class="body">
+        <!-- HEADER -->
+        <header id="myHeader" class="myHeader">
+            <nav class="navig">
+                <!-- BRAND e MENU-MOBILE -->
+                <div class="mobile-brand">
+                    <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#menu-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="brand" href="index.html">
+                        Compjunior
+                    </a>
+                </div>
+                <!-- BRAND e MENU-MOBILE -->
+
+                <!-- MENU-DESKTOP -->
+                <div class="collapse navbar-collapse" id="munu-nav">
+                    <ul class="navigator">
+                        <li><a href="index.html" class="link-menu">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                            <ul class="dropdown-menu a-cores">
+                                <li><a href="addError.html">Erros</a></li>
+                                <li><a href="addProject.html">Projetos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="search.html">Pesquisar</a></li>
+                    </ul>
+                </div>
+                <!-- MENU-DESKTOP FIM -->
+            </nav>
+        </header>
+        <!-- HEADER-FIM -->
+
+        <!-- CONTEUDO -->
+        <main id="myMain" class="myMain">
+            <!-- Section para cadastro de projetos. -->
+            <section id="sectionCadastro" class="container-fluid">
+                <h2 class="intro-text text-center">
                 Cadastrar Projeto
             </h2>
-            <form role="form" name="projectform" id="projectform">
-                <div class="row">
-                	<!--Insere o nome do projeto-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Nome do Projeto</label>
-                        <input type="text" name="nameProject" id="nameProject" class="form-control">
+                <form role="form" name="projectform" id="projectform">
+                    <div class="row">
+                        <!-- Insere o nome do projeto -->
+                        <div class="form-group col-lg-12">
+                            <label for="nome" class="control-label">Nome do Projeto</label>
+                            <input type="text" name="nameProject" id="nameProject" class="form-control">
+                        </div>
+                        <!-- Selecionar a plataforma -->
+                        <div class="form-group col-lg-12">
+                            <label for="sel1">Plataforma</label>
+                            <select class="form-control" id="platform">
+                                <option disabled selected value> Selecione a plataforma </option>
+                                <option>Android</option>
+                                <option>WebSite</option>
+                                <option>Desktop</option>
+                            </select>
+                        </div>
+                        <!--  Selecionar o membro da equipe que vai estar vinculado àquele projeto -->
+                        <div class="form-group col-lg-12">
+                            <label for="sel1">Equipe</label>
+                            <select class="form-control" id="member">
+                                <option disabled selected value> Selecione o membro da equipe </option>
+                                <option>Matheus Nogueira</option>
+                                <option>Lucas de Paula</option>
+                                <option>Arlen Mateus Mendes</option>
+                                <option>Lucas Lopes Garcia</option>
+                            </select>
+                        </div>
+                        <!-- Faz uma breve descrição a cerca do projeto -->
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label for="mensagem" class="control-label">Descrição do Projeto</label>
+                            <textarea class="form-control" rows="6" name="mensagemProjeto" id="mensagemProjeto"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="button" class="btn btn-primary rp " onclick="enviar()">Cadastrar</button>
+                            <button type="button" class="btn btn-primary rp " onclick="window.location.href='index.html'">Cancelar</button>
+                        </div>
                     </div>
-                    <!--Selecionar a plataforma-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Plataforma</label>
-                      <select class="form-control" id="platform">
-                        <option disabled selected value>  Selecione a plataforma  </option>
-                        <option>Android</option>
-                        <option>WebSite</option>
-                        <option>Desktop</option>
-                      </select>
-                    </div>
-                    <!--Selecionar o membro da equipe que vai estar vinculado àquele projeto-->
-                    <div class="form-group col-lg-12">
-                      <label for="sel1">Equipe</label>
-                      <select class="form-control" id="member">
-                        <option disabled selected value> Selecione o membro da equipe </option>
-                        <option>Matheus Nogueira</option>
-                        <option>Lucas de Paula</option>
-                        <option>Arlen Mateus Mendes</option>
-                        <option>Lucas Lopes Garcia</option>
-                      </select>
-                    </div>
-                    <!--Faz uma breve descrição a cerca do projeto-->
-                    <div class="clearfix"></div>
-                    <div class="form-group col-lg-12">
-                        <label for="mensagem" class="control-label">Descrição do Projeto</label>
-                        <textarea class="form-control" rows="6" name="mensagemProjeto" id="mensagemProjeto"></textarea>
-                    </div>
-                    <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary rp " onclick="enviar()" >Cadastrar</button>
-                        <button type="button" class="btn btn-primary rp "  onclick="window.location.href='index.html'" >Cancelar</button>
-                    </div>
-                </div>
 
-            </form>
-        </section>
-            
-    </body>
-    <!--Footer-->
-	<footer>
-    <img src="imagens/LogoCompbranca.png">
-	  <p>Copyright &copy; Grupo 2 PS2016.1</p>
-	</footer>
+                </form>
+            </section>
+        </main>
+        <!-- CONTEUDO FIM -->
+
+        <!-- FOOTER -->
+        <footer id="myFooter" class="myFooter">
+            <a href="#">CompJr</a>
+            <p>Copyright &copy; Grupo 2 PS2016.1</p>
+        </footer>
+        <!-- FOOTER FIM -->
+    </div>
+    <!-- ALL-PAGE FIM -->
+</body>
+
 </html>

@@ -1,0 +1,318 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+}
+
+
+/* HEADER */
+
+.myHeader {
+    background-color: #1793A6;
+    min-height: 75px;
+    width: 100%;
+}
+
+.navig {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.mobile-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-brand button span {
+    background-color: white;
+}
+
+.mobile-brand button:hover span {
+    background-color: #cc1f3b;
+}
+
+.navbar-toggle {
+    margin-left: 0;
+}
+
+.brand {
+    background: url(../imagens/LogoCompbrancaBugTracker.png) center no-repeat;
+    background-size: 100%;
+    color: transparent;
+    font-size: 1.875em;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.brand:hover {
+    color: transparent;
+}
+
+.navigator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigator li {
+    padding: 0 20px;
+}
+
+.navigator li a {
+    color: #fff;
+}
+
+.navigator li a:hover {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+.a-cores {
+    background-color: #1793A6;
+}
+
+.a-cores li:hover {
+    background-color: #1783A6;
+}
+
+.a-cores li a:hover {
+    background-color: transparent;
+}
+
+
+/* HEADER FIM */
+
+
+/* CONTEUDO */
+
+
+/** Geral **/
+
+.myMain {
+    flex-grow: 3;
+    margin: 50px auto;
+}
+
+
+/* --Botões-- */
+
+.btn-grande {
+    width: 250px;
+    height: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    position: relative;
+    min-width: 88px !important;
+    padding: 12px 20px !important;
+    outline: none !important;
+    background-color: #1793A6 !important;
+    border: none;
+    margin: 5px auto;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 3px !important;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12) 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -o-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12) 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12) 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -ms-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12) 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12) 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.rp {
+    border-color: #cdcdcd !important;
+}
+
+.rp:hover {
+    background-color: #cc1f3b !important;
+    border-color: #cc1f3b !important;
+    opacity: 0.9 !important;
+}
+
+.rp:focus,
+.rp:active {
+    background-color: #cc1f3b !important;
+    opacity: 1 !important;
+    border-color: #cc1f3b !important;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15) 0 3px 6px 0 rgba(0, 0, 0, 0.23) !important;
+    -o-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15) 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15) 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    -ms-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15) 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15) 0 3px 6px 0 rgba(0, 0, 0, 0.23) !important;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.50);
+    pointer-events: none;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -o-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.ripple.show {
+    -webkit-animation: ripple .45s ease-out;
+    animation: ripple .45s ease-out;
+}
+
+@-webkit-keyframes ripple {
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* --Fim Botões-- */
+
+
+/** Geral FIM **/
+
+
+/** index **/
+
+.myMain div h2 {
+    margin-bottom: 50px;
+}
+
+.myMain div p {
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+
+
+/* index FIM */
+
+
+/** Cadastrar-Erro **/
+
+#sectionCadastro h2 {
+    padding-bottom: 50px;
+    font-size: 40px;
+}
+
+
+/** Cadastrar-Erro FIM **/
+
+
+/** Search **/
+
+.switch {
+    display: flex;
+    justify-content: center;
+    margin: 5em auto;
+    flex-wrap: wrap;
+}
+
+.switch-li {
+    list-style-type: none !important;
+}
+
+.row {
+    margin: 0 50px;
+}
+
+.cont {
+    position: relative;
+    height: 100%;
+}
+
+
+/** Search FIM **/
+
+
+/** Lista **/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+.page-header {
+    margin: 0 0 20px;
+    border: none;
+}
+
+
+/** Lista FIM **/
+
+
+/* FOOListaTER FIM */
+
+.myFooter {
+    background-color: #424242;
+    min-height: 75px;
+    text-align: center;
+    width: 100%;
+}
+
+.myFooter a {
+    background: url(../imagens/LogoCompbranca.png) center no-repeat;
+    background-size: 100%;
+    color: transparent;
+    font-size: 2.8em;
+}
+
+.myFooter p {
+    color: white;
+    font-size: 11px;
+    opacity: .7;
+}
+
+
+/* FOOTER FIM */
