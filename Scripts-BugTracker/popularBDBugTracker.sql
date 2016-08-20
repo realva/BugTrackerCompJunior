@@ -9,6 +9,7 @@ INSERT INTO projeto (idProjeto, nome, plataforma, tester, descricao) VALUES ('1'
 INSERT INTO projeto (idProjeto, nome, plataforma, tester, descricao) VALUES ('2', 'Comp Android', 'Android', 'Lucas Lopes Garcia', 'PS2016'); 
 INSERT INTO projeto (idProjeto, nome, plataforma, tester, descricao) VALUES ('3', 'Fórum de Química', 'WebSite', 'Lucas de Paula', 'PS2016'); 
 INSERT INTO projeto (idProjeto, nome, plataforma, tester, descricao) VALUES ('4', 'Ponto Eletrônico Comp', 'Android', 'Matheus Nogueira', 'PS2016');
+INSERT INTO projeto (idProjeto, nome, plataforma, tester, descricao) VALUES ('5', 'Comp Web', 'WebSite', 'Lucas Lopes Garcia', 'PS2016');
 
 
 INSERT INTO erro (idErro, nome, tipo, descricao, projeto_idProjeto) VALUES ('1', 'NomeDoErro1', 'Erro de compilação', 'PS2016', '1');
