@@ -39,6 +39,26 @@ html {
     height: 75px;
 }
 
+.navi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navi li {
+    margin: 20px;
+}
+
+#navi-slide {
+    position: fixed;
+    left: -150px;
+    top: 75px;
+    height: 0;
+    background: #1793A6;
+    transition: left 0.4s linear;
+    z-index: 100000;
+}
+
 .mobile-brand {
     width: 100%;
     display: flex;
@@ -90,6 +110,19 @@ html {
 }
 
 .navigator li a:hover {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+.navi li {
+    padding: 0 20px;
+}
+
+.navi li a {
+    color: #fff;
+}
+
+.navi li a:hover {
     color: #e5e5e5;
     text-decoration: none;
 }

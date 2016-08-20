@@ -68,3 +68,15 @@ $(function () {
         dateFormat: 'dd/mm/yyyy'
     });
 });
+
+
+function slidetoggle() {
+    var slider = document.getElementById("navi-slide");
+    slider.style.height = window.innerHeight - 75 + "px";
+
+    if (slider.style.left == "0px") {
+        slider.style.left = "-150px";
+    } else {
+        slider.style.left = "0px";
+    }
+}
