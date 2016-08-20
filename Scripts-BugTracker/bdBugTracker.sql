@@ -36,7 +36,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `bdBugTracker`.`erro` (
   `idErro` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
-  `tipo` ENUM('Interface', 'Erro de lógica', 'Erro de compilcação', 'Erro de execução') NOT NULL,
+  `tipo` ENUM('Interface', 'Erro de lógica', 'Erro de compilação', 'Erro de execução') NOT NULL,
   `descricao` LONGTEXT NOT NULL,
   `projeto_idProjeto` INT NOT NULL,
   PRIMARY KEY (`idErro`),
