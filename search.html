@@ -2,142 +2,185 @@
 <!--Projeto a ser realizado para o PS 2016.1/Etapa 3-->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>BugTracker</title>
-        <meta name="description" content="Controlador de erros da CompJr">
-        <link rel="stylesheet" href="css/bootstrap.min.css" >
-        <link rel="stylesheet" href="css/style.css" >
-        <!--Referência para a folha de estilo base a ser usada-->
-        <link href="css/mycss.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-borda nav-tam ">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                <a class="navbar-brand" href="index.html">
-                    <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbranca.png" >
-                </a>
-            </div>
-        </nav>
-        
-        <!-- FIM DA NAVBAR -->
 
-        <!--Toggle de botões-->
-        <div class="row">
-            <div class="col-sm-offset-4 col-sm-4 text-center">
-                <div id="toggle" class="btn-group" data-toggle="buttons">
-                    <button id="buttonProject" type="button" class="btn btn-primary" onclick="enviar()" >Projeto</button>
-                    <button id="buttonError" type="button" class="btn btn-primary" onclick="enviar()" >Erro</button>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>CompJúnior BugTracker | Buscar</title>
+    <link rel="icon" href="imagens/joaninha.png">
+    <meta name="description" content="Controlador de erros da CompJr">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--Referência para a folha de estilo base a ser usada-->
+    <link href="css/teste.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <!-- ALL-PAGE -->
+    <div id="myContain" class="body">
+        <!-- HEADER -->
+        <header id="myHeader" class="myHeader">
+            <nav class="navig">
+                <!-- BRAND e MENU-MOBILE -->
+                <div class="mobile-brand">
+                    <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#menu-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="brand" href="index.html">
+                        Compjunior
+                    </a>
                 </div>
-            </div>
+                <!-- BRAND e MENU-MOBILE -->
+
+                <!-- MENU-DESKTOP -->
+                <div class="collapse navbar-collapse" id="munu-nav">
+                    <ul class="navigator">
+                        <li><a href="index.html" class="link-menu">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="flex-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <p>Cadastro</p>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu a-cores">
+                                <li><a href="addError.html">Erros</a></li>
+                                <li><a href="addProject.html">Projetos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="search.html">Pesquisar</a></li>
+                    </ul>
+                </div>
+                <!-- MENU-DESKTOP FIM -->
+            </nav>
+        </header>
+        <!-- HEADER-FIM -->
+
+        <!-- CONTEUDO -->
+        <main id="myMain" class="myMain">
+            <div class="cont">
+                <div id="tabs">
+                    <ul class="switch switch-li">
+                        <li class="switch-li">
+                            <a href="#left">
+                                <button class="btn btn-primary rp btn-grande" autofocus>Erro</button>
+                            </a>
+                        </li>
+                        <li class="switch-li">
+                            <a href="#right">
+                                <button class="btn btn-primary rp btn-grande">Projeto</button>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div id="left">
+                        <form role="form" name="errorsearch" id="errorsearch">
+                            <div class="row">
+                                <!-- Procura pelo nome do erro -->
+                                <div class="form-group col-lg-12">
+                                    <label for="nome">Pequise pelo nome do erro</label>
+                                    <input type="text" name="nameError" id="nameError" class="form-control" placeholder="Deixe em branco para pesquisar todos os erros">
+
+                                </div>
+                                <!-- Seleciona o primeiro filtro -->
+                                <div class="form-group col-lg-4">
+                                    <label for="sel1">Filtro</label>
+                                    <select class="form-control" id="#">
+                                        <option disabled selected value> Filtro erro 1 </option>
+                                        <option>Escolha de filtro 01</option>
+                                        <option>Escolha de filtro 02</option>
+                                        <option>Escolha de filtro 03</option>
+                                        <option>Escolha de filtro 04</option>
+                                    </select>
+                                </div>
+                                <!--  Seleciona o segundo filtro -->
+                                <div class="form-group col-lg-4">
+                                    <label for="sel1">Filtro</label>
+                                    <select class="form-control" id="#">
+                                        <option disabled selected value> Filtro erro 2 </option>
+                                        <option>Escolha de filtro 01</option>
+                                        <option>Escolha de filtro 02</option>
+                                        <option>Escolha de filtro 03</option>
+                                        <option>Escolha de filtro 04</option>
+                                    </select>
+                                </div>
+                                <!-- Seleciona o terceiro filtro -->
+                                <div class="form-group col-lg-4">
+                                    <label for="sel1">Filtro</label>
+                                    <select class="form-control" id="#">
+                                        <option disabled selected value> Filtro erro 3 </option>
+                                        <option>Escolha de filtro 01</option>
+                                        <option>Escolha de filtro 02</option>
+                                        <option>Escolha de filtro 03</option>
+                                        <option>Escolha de filtro 04</option>
+                                    </select>
+                                </div>
+                                <!-- Botão de Pesquisa -->
+                                <div class="form-group col-lg-12">
+                                    <button type="button" class="btn btn-primary rp" onclick="window.location.href='list.html'">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Caso escolha o botão da esquerda -->
+                    <div id="right">
+                        <form role="form" name="projectsearch" id="projectsearch">
+                            <div class="row">
+                                <!-- Busca pelo nome do projeto -->
+                                <div class="form-group col-lg-12">
+                                    <label for="nome" class="control-label">Pequise pelo nome do projeto</label>
+                                    <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="Deixe em branco para pesquisar todos os projetos">
+                                </div>
+                                <!-- Seleciona o primeiro filtro -->
+                                <div class="form-group col-lg-4">
+                                    <label for="sel1">Filtro</label>
+                                    <select class="form-control" id="#">
+                                        <option disabled selected value> Filtro Projeto 1 </option>
+                                        <option>Escolha de filtro 01</option>
+                                        <option>Escolha de filtro 02</option>
+                                        <option>Escolha de filtro 03</option>
+                                        <option>Escolha de filtro 04</option>
+                                    </select>
+                                </div>
+                                <!-- Seleciona o segundo filtro -->
+                                <div class="form-group col-lg-4">
+                                    <label for="sel1">Filtro</label>
+                                    <select class="form-control" id="#">
+                                        <option disabled selected value> Filtro Projeto 2 </option>
+                                        <option>Escolha de filtro 01</option>
+                                        <option>Escolha de filtro 02</option>
+                                        <option>Escolha de filtro 03</option>
+                                        <option>Escolha de filtro 04</option>
+                                    </select>
+                                </div>
+                                <!--  Botão de Pesquisa -->
+                                <div class="form-group col-lg-12">
+                                    <button type="button" class="btn btn-primary rp " onclick="window.location.href='list.html'">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </main>
+        <!-- CONTEUDO FIM -->
+
+        <!-- FOOTER -->
+        <footer id="myFooter" class="myFooter">
+            <a href="#">CompJr</a>
+            <p>Copyright &copy; Grupo 2 PS2016.1</p>
+        </footer>
+        <!-- FOOTER FIM -->
         </div>
+        <!-- ALL-PAGE FIM -->
+</body>
 
-            
-       <!--Caso escolha o botão da direita-->
-       <div id="right">
-            <form role="form" name="errorsearch" id="errorsearch">
-                <div class="row">
-                    <!--Procura pelo nome do erro-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Pequise pelo nome do erro</label>
-                        <input type="text" name="nameError" id="nameError" class="form-control">
-                    </div>
-                    <!--Seleciona o primeiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value>  Filtro erro 1  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Seleciona o segundo filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro erro 2  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Seleciona o terceiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro erro 3  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Botão de Pesquisa-->
-                    <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Buscar</button>
-                    </div>
-                </div>
-            </form>
-       </div>
-       <!--Caso escolha o botão da esquerda-->
-       <div id="left"> 
-            <form role="form" name="projectsearch" id="projectsearch">
-                <div class="row">
-                    <!--Busca pelo nome do projeto-->
-                    <div class="form-group col-lg-12">
-                        <label for="nome" class="control-label">Pequise pelo nome do projeto</label>
-                        <input type="text" name="nameProject" id="nameProject" class="form-control">
-                    </div>
-                    <!--Seleciona o primeiro filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value>  Filtro Projeto 1  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Seleciona o segundo filtro-->
-                    <div class="form-group col-lg-4">
-                      <label for="sel1">Filtro</label>
-                      <select class="form-control" id="#">
-                        <option disabled selected value> Filtro Projeto 2  </option>
-                        <option>Escolha de filtro 01</option>
-                        <option>Escolha de filtro 02</option>
-                        <option>Escolha de filtro 03</option>
-                        <option>Escolha de filtro 04</option>
-                      </select>
-                    </div>
-                    <!--Botão de Pesquisa-->
-                    <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-primary" onclick="enviar()" >Buscar</button>
-                    </div>
-                </div>
-            </form>
-       </div> 
-    </body>
-    <!--Script responsável pelo Toggle-->
-    <script>
-        $('#toggle > button').click(function() {
-            var ix = $(this).index();
-
-            $('#left').toggle( ix === 0 );
-            $('#right').toggle( ix === 1 );
-        });
-    </script>
 </html>
