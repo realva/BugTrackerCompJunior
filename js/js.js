@@ -75,7 +75,7 @@ function slidetoggle() {
     slider.style.height = window.innerHeight - 75 + "px";
 
     if (slider.style.left == "0px") {
-        slider.style.left = "-150px";
+        slider.style.left = "-250px";
     } else {
         slider.style.left = "0px";
     }
