@@ -292,6 +292,18 @@ td {
     border: 1px solid transparent;
 }
 
+.detail {
+    width: 30px !important;
+    height: 30px;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0px auto !important text-align: center;
+}
+
+.glyphicon-info-sign {
+    color: white;
+}
+
 
 /** Lista FIM **/
 
