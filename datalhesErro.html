@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CompJúnior BugTracker | Detalhes do Erro</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="imagens/joaninha.png">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/teste.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- ALL-PAGE -->
+    <div id="myContain" class="body">
+        <!-- HEADER -->
+        <header id="myHeader" class="myHeader">
+            <nav class="navig">
+                <!-- BRAND e MENU-MOBILE -->
+                <div class="mobile-brand">
+                    <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#menu-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="brand" href="index.html">
+                        Compjunior
+                    </a>
+                </div>
+                <!-- BRAND e MENU-MOBILE -->
+
+                <!-- MENU-DESKTOP -->
+                <div class="collapse navbar-collapse" id="munu-nav">
+                    <ul class="navigator">
+                        <li><a href="index.html" class="link-menu">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                            <ul class="dropdown-menu a-cores">
+                                <li><a href="addError.html">Erros</a></li>
+                                <li><a href="addProject.html">Projetos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="search.html">Pesquisar</a></li>
+                    </ul>
+                </div>
+                <!-- MENU-DESKTOP FIM -->
+            </nav>
+        </header>
+        <!-- HEADER-FIM -->
+
+        <!-- CONTEUDO -->
+        <main id="myMain" class="myMain">
+            <div class="conte-detalhes">
+                <div class="cont-header">
+
+                    <h1 id="titulo" class="intro-text text-center">Detalhes do erro</h1>
+                </div>
+
+                <div class="cont-down-header">
+                    <div class="text-center">
+                        <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
+                        Descrição do Erro</h3>
+                        <div class="panel">
+                            <!--  -->
+                            <textarea class="form-control" rows="5" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-cont">
+                    <div class="">
+                        <div class="col-sm-12 space">
+                            <label>Nome:</label>
+                            <input type="text" name="nameError" id="nameError" class="form-control" placeholder="Erro de Interface" disabled>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="col-sm-4 space">
+                            <label>Projeto:</label>
+                            <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="SETI" disabled>
+                        </div>
+                        <div class="col-sm-4 space">
+                            <label>Tipo:</label>
+                            <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="Erro de Usabilidade" disabled>
+                        </div>
+                        <div class="col-sm-4 space">
+                            <label>Data:</label>
+                            <input type="date" name="nameProject" id="nameProject" class="form-control" placeholder="Date" onfocus="(this.type='date')" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-footer">
+                    <div class="col-sm-12">
+                        <form>
+                            <div class="form-group">
+                                <label class="fullscree">Solução do Erro
+                                    <button class="addSoluc btn-primary rp"><span class="glyphicon glyphicon-plus"></span></button>
+                                </label>
+                                <textarea class="form-control" rows="5"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- CONTEUDO FIM -->
+
+        <!-- FOOTER -->
+        <footer id="myFooter" class="myFooter">
+            <a href="#">CompJr</a>
+            <p>Copyright &copy; Grupo 2 PS2016.1</p>
+        </footer>
+        <!-- FOOTER FIM -->
+    </div>
+    <!-- ALL-PAGE FIM -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    </script>
+</body>
+
+
+<!-- <body>
+    NAVBAR
+    <nav class="navbar navbar-borda nav-tam">
+        <div class="container-fluid">
+            <div class="nav-widith navbar-header">
+                <div id="btnnav" class="dropdown">
+                    <button type="button" class="bt btn btn-default">Home</button>
+                    <button class="bt btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Cadastrar
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Erros</a></li>
+                        <li><a href="#">Projetos</a></li>
+                    </ul>
+                    <button type="button" class="bt btn btn-default">Buscar</button>
+                </div>
+                <a class="navbar-brand" href="#">
+                    <img id="logoComp" alt="Comp Junior" src="imagens/LogoCompbranca.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="conteudo">
+        <div class="container-fluid">
+            <h1 id="titulo" class="intro-text text-center">Detalhes do erro</h1>
+        </div>
+        <div class="container-fluid">
+            <ul class="list-group">
+                <li class="list-group-item text-center">
+                    <div class="row">
+                        <div class="bt col-sm-12">
+                            <h3>Nome:</h3>
+                            <p>Erro no footer</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bt col-sm-4">
+                            <h3>Projeto:</h3>
+                            <p>SETI</p>
+                        </div>
+                        <div class="bt col-sm-4">
+                            <h3>Tipo:</h3>
+                            <p>Erro de compilação</p>
+                        </div>
+                        <div class="bt col-sm-4">
+                            <h3>Data:</h3>
+                            <p>??/??/??</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row container-fluid">
+            <div class="col-sm-6 text-center">
+                <form>
+                    <div class="form-group">
+                        <label>
+                            <h3>Descrição do Erro</h3></label>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6 text-center">
+                <form>
+                    <div class="form-group">
+                        <label>
+                            <h3>Solução</h3></label>
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body> -->
+
+</html>
