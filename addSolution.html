@@ -1,0 +1,192 @@
+<!--Comp Júnior/Grupo 2-->
+<!--Projeto a ser realizado para o PS 2016.1/Etapa 3-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>CompJúnior BugTracker | Cadastrar Projeto</title>
+    <link rel="icon" href="imagens/joaninha.png">
+    <meta name="description" content="Controlador de erros da CompJr">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Referência para a folha de estilo base a ser usada-->
+    <link href="css/teste.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href="css/sweetalert2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- ALL-PAGE -->
+    <div id="myContain" class="body">
+        <!-- HEADER -->
+        <header id="myHeader" class="myHeader">
+            <nav class="navig">
+                <!-- BRAND e MENU-MOBILE -->
+                <div class="mobile-brand">
+                    <button type="button" class="navbar-toggle collapsed menu-pad" data-toggle="collapse" data-target="#menu-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="brand" href="index.html">
+                        Compjunior
+                    </a>
+                </div>
+                <!-- BRAND e MENU-MOBILE -->
+
+                <!-- MENU-DESKTOP -->
+                <div class="collapse navbar-collapse" id="munu-nav">
+                    <ul class="navigator">
+                        <li><a href="index.html" class="link-menu">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="flex-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <p>Cadastro</p>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu a-cores">
+                                <li><a href="addError.html">Erros</a></li>
+                                <li><a href="addProject.html">Projetos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="search.html">Pesquisar</a></li>
+                    </ul>
+                </div>
+                <!-- MENU-DESKTOP FIM -->
+            </nav>
+        </header>
+        <!-- HEADER-FIM -->
+
+        <!-- CONTEUDO -->
+        <main id="myMain" class="myMain">
+
+            <div class="conte-detalhes">
+                <div class="cont-header">
+
+                    <h1 id="titulo" class="intro-text text-center">Cadastro de Solução</h1>
+                </div>
+
+                <div class="cont-down-header">
+                    <div class="text-center">
+                        <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
+                        Descrição do Erro</h3>
+                        <div class="panel">
+                            <!--  -->
+                            <textarea class="form-control" rows="6" disabled></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 space">
+                        <label for="nameError" class="control-label">Nome do Erro</label>
+                        <input type="text" name="nameError" id="nameError" class="form-control" placeholder="Erro de Interface" disabled>
+
+                    </div>
+
+                    <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
+                        Detalhes do Erro</h3>
+                    <div class="panel">
+                        <div class="align">
+                            <div class="col-sm-12 space">
+                                <label>Projeto:</label>
+                                <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="SETI" disabled>
+                            </div>
+                            <div class="col-sm-12 space">
+                                <label>Tipo:</label>
+                                <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="Erro de Usabilidade" disabled>
+                            </div>
+                            <div class="col-sm-12 space">
+                                <label>Data:</label>
+                                <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="Date" onfocus="(this.type='date')" autofocus disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-cont">
+                    <div class="col-sm-12">
+                        <form role="form" name="solucform" id="solucform">
+                            <div class="form-group">
+                                <label for="soluc" class="fullsc control-label">
+                                    <div>
+                                        <h6 class="recoil">Solução do Erro</h6>
+                                    </div>
+                                </label>
+                                <textarea name="soluc" id="soluc" class="form-control" rows="6"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dev" class="control-label">Desenvolvedor</label>
+                                <select class="form-control" name="dev" id="dev">
+                                    <option disabled selected value> Selecione a plataforma </option>
+                                    <option>Matheus Nogueira</option>
+                                    <option>Lucas de Paula</option>
+                                    <option>Arlen Mateus Mendes</option>
+                                    <option>Lucas Lopes Garcia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary rp " onclick="enviar()">Cadastrar</button>
+                                <button type="button" class="btn btn-primary rp " onclick="window.location.href='detalhesErro.html'">Cancelar</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+        <!-- CONTEUDO FIM -->
+
+        <!-- FOOTER -->
+        <footer id="myFooter" class="myFooter">
+            <a href="#">CompJr</a>
+            <p>Copyright &copy; Grupo 2 PS2016.1</p>
+        </footer>
+        <!-- FOOTER FIM -->
+    </div>
+    <!-- ALL-PAGE FIM -->
+    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+    <script type="text/javascript" src="js/validarFormProject.js"></script>
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+    <script>
+        function enviar() {
+            var nomeErro = $("#nameError").val();
+            var soluc = $("#soluc").val(); // nome do projeto
+            var dev = $("#dev").val(); // descricao do projeto
+
+            if (soluc != "" && dev != "") {
+
+                swal({
+                    title: 'A solução do ' + nomeErro + ' foi cadastrada com sucesso',
+                    //text: 'Sucesso',
+                    type: 'success',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }, function () {
+                    window.location.reload();
+                });
+            } else {
+                $("#solucform").submit(); // tenta o submit no form, com isso a validacao de campo é chamada automaticamente
+            }
+        }
+
+
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    </script>
+</body>
+
+</html>
