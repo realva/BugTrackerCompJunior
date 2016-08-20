@@ -64,6 +64,11 @@ html {
     font-size: 1.875em;
     padding: 5px;
     margin-left: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .brand:hover {
@@ -376,6 +381,9 @@ h3.accordion {
     outline: none;
     transition: 0.4s;
     -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
     user-select: none;
 }
 
@@ -480,6 +488,11 @@ div.panel.show {
     background-size: 100%;
     color: transparent;
     font-size: 2.8em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .myFooter p {
