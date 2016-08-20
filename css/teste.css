@@ -101,6 +101,17 @@ html {
     background-color: transparent;
 }
 
+.flex-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.flex-a p {
+    margin: 0;
+}
+
 
 /* HEADER FIM */
 
@@ -290,6 +301,8 @@ td {
 .page-header {
     margin: 0 0 20px;
     border: 1px solid transparent;
+    right: -20px;
+    top: -20px;
 }
 
 .detail {
