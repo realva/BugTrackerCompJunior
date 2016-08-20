@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `bdBugTracker`.`solucao` (
   `idSolucao` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` LONGTEXT NOT NULL,
+  `desenvolvedor` VARCHAR(45) NOT NULL,
   `erro_idError` INT NOT NULL,
   PRIMARY KEY (`idSolucao`),
   INDEX `fk_solucao_erro1_idx` (`erro_idError` ASC),
