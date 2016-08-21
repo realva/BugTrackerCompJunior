@@ -26,7 +26,7 @@ $(function(){
                             }
                         }
                     },
-                    member: {
+                    tester: {
                         validators: {
                             notEmpty: {
                                 message: 'Por favor escolha o tester desse projeto.'

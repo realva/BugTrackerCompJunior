@@ -112,13 +112,13 @@
                         </div>
                         <!--  Selecionar o membro da equipe que vai estar vinculado àquele projeto -->
                         <div class="form-group col-lg-12">
-                            <label for="member" class="control-label">Equipe</label>
-                            <select class="form-control" name="member" id="member">
-                                <option disabled selected value> Selecione o membro da equipe </option>
-                                <option>Matheus Nogueira</option>
-                                <option>Lucas de Paula</option>
-                                <option>Arlen Mateus Mendes</option>
-                                <option>Lucas Lopes Garcia</option>
+                            <label for="member" class="control-label">Tester</label>
+                            <select class="form-control" name="tester" id="tester">
+                                <option disabled selected value> Selecione o tester da equipe </option>
+                                <option>Lucas Weber</option>
+                                <option>Joao Paulo Costa</option>
+                                <option>Matheus Barros</option> 
+                                <option>Lucas de Paula</option> 
                             </select>
                         </div>
                         <!-- Faz uma breve descrição a cerca do projeto -->
@@ -157,19 +157,46 @@
             var nomeProjeto = $("#nameProject").val(); // nome do projeto
             var mensagemProjeto = $("#mensagemProjeto").val(); // descricao do projeto
             var platform = $("#platform").val(); // plataforma do projeto
-            var member = $("#member").val(); // membro tester designado ao projeto
+            var tester = $("#tester").val(); // membro tester designado ao projeto
 
-            if (nomeProjeto != "" && mensagemProjeto != "" && platform != "" && member != "") {
+            if (nomeProjeto != "" && mensagemProjeto != "" && platform != "" && tester != "") {
 
-                swal({
-                    title: 'O projeto ' + nomeProjeto + ' foi cadastrado com sucesso',
-                    //text: 'Sucesso',
-                    type: 'success',
-                    confirmButtonColor: '#3085d6',
-                    confirmButtonText: 'OK'
-                }, function () {
-                    window.location.reload();
-                });
+                // requisicao via AJAX
+                $.ajax({
+
+                    type: 'post',
+                    data: {
+                        nomeProjeto: nomeProjeto,
+                        mensagemProjeto: mensagemProjeto,
+                        platform: platform,
+                        tester: tester
+                    },
+                    url: 'php/bdCadastrarProjeto.php', 
+
+                    success: function(data) {
+
+                        swal({
+                        title: 'O projeto ' + nomeProjeto + ' foi cadastrado com sucesso',
+                        //text: 'Sucesso',
+                        type: 'success',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK'
+                        }, function () {
+                        window.location.reload();
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        
+                        swal({
+                        title: 'O projeto não pode ser cadastrado',
+                        text: xhr.responseText,
+                        type: 'error',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'OK'
+                        });
+                    }
+
+                });        
             } else {
                 $("#projectform").submit(); // tenta o submit no form, com isso a validacao de campo é chamada automaticamente
             }
