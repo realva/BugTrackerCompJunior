@@ -1,5 +1,6 @@
 <?php
 	ini_set( 'default_charset', 'utf-8');
+
 	include("connect.php");
 	
 	$nomeErro = $_POST['nameError'];
