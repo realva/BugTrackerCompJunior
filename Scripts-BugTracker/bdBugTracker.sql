@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `bdBugTracker`.`projeto` (
   `plataforma` ENUM('Android', 'WebSite', 'Desktop') NOT NULL,
   `tester` ENUM('Matheus Nogueira', 'Lucas de Paula', 'Arlen Mateus Mendes', 'Lucas Lopes Garcia') NOT NULL,
   `descricao` LONGTEXT NOT NULL,
+  `data` DATE NOT NULL,
   PRIMARY KEY (`idProjeto`))
 ENGINE = InnoDB;
 
