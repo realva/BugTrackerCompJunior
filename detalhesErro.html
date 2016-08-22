@@ -14,6 +14,11 @@
     <script type="text/javascript" src="js/js.js"></script>
     <script type="text/javascript" src="js/detalhes.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
                                     <p>Cadastro</p>
                                     <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu a-cores">
+                                <ul class="">
                                     <li><a href="addError.html">Erros</a></li>
                                     <li><a href="addProject.html">Projetos</a></li>
                                 </ul>
@@ -80,7 +85,7 @@
         <!-- HEADER-FIM -->
 
         <!-- CONTEUDO -->
-        <main id="myMain" class="myMain">
+        <main id="myMain" class="myMain wow fadeIn">
             <div class="conte-detalhes">
                 <div class="cont-header">
 
@@ -88,14 +93,27 @@
                 </div>
 
                 <div class="cont-down-header">
-                    <div class="text-center">
-                        <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
-                        Descrição do Erro</h3>
-                        <div class="panel">
-                            <!--  -->
-                            <textarea class="form-control" rows="5" id="descricaoErro" disabled></textarea>
+                    <div class="hpanel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                        <div class="hpanel hpanel-default">
+                            <div class="hpanel-heading" role="tab" id="headingOne">
+                                <h4 class="hpanel-title">
+					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<i class="more-less glyphicon glyphicon-plus"></i>
+						Descrição do Erro
+					</a>
+				</h4>
+                            </div>
+                            <div id="collapseOne" class="hpanel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="hpanel-body">
+                                    <textarea class="form-control" rows="5" id="descricaoErro" disabled></textarea>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
+                    <!-- panel-group -->
+
                 </div>
                 <div class="cont-cont">
                     <div class="">
@@ -132,8 +150,8 @@
                         <div class="fullscree" id="noSolution">
                             <h6 class="recoil">Adicionar Solução</h6>
                             <button onclick="window.location.href='addSolution.html'" class="addSoluc btn-primary rp" id="btnSolucao"><span class="glyphicon glyphicon-plus"></span></button>
-                        </div>             
-                    </div>                                    
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -159,22 +177,33 @@
         }
     </script>
     <script>
-        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function(data){
+        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function (data) {
             $("#descricaoErro").val(data.descricao);
             $("#nomeErro").val(data.nomeErro);
             $("#nomeProjeto").val(data.nomeProjeto);
             $("#tipoErro").val(data.tipo);
             $("#dataErro").val(data.data);
-            if(data.solucao){
+            if (data.solucao) {
                 $("#solucaoErro").val(data.solucao);
                 $("#noSolution").hide();
-            }
-            else{
+            } else {
                 $("#solution").hide();
-                $("#btnSolucao").attr('onclick', "window.location.href='addSolution.html?id="+query().id+"'");
+                $("#btnSolucao").attr('onclick', "window.location.href='addSolution.html?id=" + query().id + "'");
             }
-            
+
         });
+
+        /*******************************
+         * ACCORDION WITH TOGGLE ICONS
+         *******************************/
+        function toggleIcon(e) {
+            $(e.target)
+                .prev('.hpanel-heading')
+                .find(".more-less")
+                .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.hpanel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.hpanel-group').on('shown.bs.collapse', toggleIcon);
     </script>
 </body>
 

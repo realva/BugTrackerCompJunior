@@ -46,7 +46,11 @@ html {
 }
 
 .navi li {
-    margin: 20px;
+    margin: 10px;
+}
+
+.navi li.dropdown {
+    margin: 0 10px;
 }
 
 #navi-slide {
@@ -54,7 +58,7 @@ html {
     left: -250px;
     top: 75px;
     height: 0;
-    background: #1793A6;
+    background: #235a63;
     transition: left 0.4s linear;
     z-index: 100000;
 }
@@ -65,12 +69,16 @@ html {
     justify-content: space-between;
 }
 
+.mobile-brand button {
+    max-width: 60px;
+}
+
 .mobile-brand button span {
     background-color: white;
 }
 
 .mobile-brand button:hover span {
-    background-color: #cc1f3b;
+    opacity: .7;
 }
 
 .navbar-toggle {
@@ -478,12 +486,15 @@ h3.accordion:hover {
     background-color: #ddd;
 }
 
-h3.accordion.active + span.glyphicon-triangle-bottom {
-    display: inline-block;
-}
-
-h3.accordion.active + span.glyphicon-triangle-right {
-    display: none;
+h3.accordion:not(.active) span.glyphicon-triangle-right {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 
@@ -494,6 +505,9 @@ div.panel {
     background-color: #f5f5f5;
     display: none;
     border: none;
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    opacity: 0;
 }
 
 
@@ -501,6 +515,9 @@ div.panel {
 
 div.panel.show {
     display: block;
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    opacity: 1;
 }
 
 
@@ -538,5 +555,51 @@ div.panel.show {
     color: #CC1F3B;
 }
 
+.heart:hover {
+    transform: scale(3);
+    font-size: 45px;
+    transition: all .4s ease;
+}
+
 
 /* FOOTER FIM */
+
+
+/*******************************
+* ACCORDION*
+*******************************/
+
+.hpanel-group .hpanel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.hpanel-default > .hpanel-heading {
+    padding: 0;
+    border-radius: 8px;
+    color: #212121;
+    background-color: #add4da;
+    border-color: #EEEEEE;
+}
+
+.hpanel-title {
+    font-size: 14px;
+}
+
+.hpanel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.hpanel-default > .hpanel-heading + .hpanel-collapse > .hpanel-body {
+    border-top-color: #EEEEEE;
+}
