@@ -25,7 +25,7 @@
 		$tipos = $tipos . 's';
 		$valores[] = $plataformaProjeto;
 	}
-	if (isset($testerProjeto)) {
+	if (isset($tester)) {
 		$where[] = 'tester = ?';
 		$tipos = $tipos . 's';
 		$valores[] = $tester;
