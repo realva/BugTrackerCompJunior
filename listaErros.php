@@ -99,6 +99,7 @@
         <script src="js/jquery.tablesorter.min.js"></script>
         <!-- Estilos necessários para o tema do tablesorter -->
         <link rel="stylesheet" href="css/blue/style.css">
+        <link rel="stylesheet" href="css/animate.css">
         <script src="js/wow.js"></script>
         <script>
             new WOW().init();
