@@ -23,6 +23,7 @@ USE `bdBugTracker` ;
 CREATE TABLE IF NOT EXISTS `bdBugTracker`.`projeto` (
   `idProjeto` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
+  `data` DATETIME DEFAULT current_timestamp,
   `plataforma` ENUM('Android', 'WebSite', 'Desktop') NOT NULL,
   `tester` ENUM('Lucas Weber', 'Joao Paulo Costa', 'Matheus Barros') NOT NULL,
   `descricao` LONGTEXT NOT NULL,
@@ -36,6 +37,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `bdBugTracker`.`erro` (
   `idErro` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
+  `data` DATETIME DEFAULT current_timestamp,
   `tipo` ENUM('Interface', 'Erro de lógica', 'Erro de compilação', 'Erro de execução') NOT NULL,
   `status` ENUM('Corrigido','Pendente')NOT NULL,
   `descricao` LONGTEXT NOT NULL,
@@ -55,7 +57,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bdBugTracker`.`solucao` (
   `idSolucao` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
+  `data` DATETIME DEFAULT current_timestamp,
   `descricao` LONGTEXT NOT NULL,
   `desenvolvedor` ENUM('Matheus Nogueira','Lucas de Paula','Arlen Mateus Mendes','Lucas Lopes Garcia')NOT NULL,
   `erro_idError` INT NOT NULL,

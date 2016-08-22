@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/extrairNomes.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
@@ -103,88 +104,85 @@
 
 
                     <div id="left">
-                        <form role="form" name="errorsearch" id="errorsearch">
+                        <form role="form" name="errorsearch" id="errorsearch" method="GET" action="listaErros.php">
                             <div class="row">
                                 <!-- Procura pelo nome do erro -->
                                 <div class="form-group col-lg-12">
                                     <label for="nome">Pequise pelo nome do erro</label>
-                                    <input type="text" name="nameError" id="nameError" class="form-control" placeholder="Deixe em branco para pesquisar todos os erros">
+                                    <input type="text" name="nomeErro" id="nameError" class="form-control" placeholder="Deixe em branco para pesquisar todos os erros">
 
                                 </div>
                                 <!-- Seleciona o primeiro filtro -->
                                 <div class="form-group col-lg-4">
-                                    <label for="sel1">Filtro</label>
-                                    <select class="form-control" id="#">
-                                        <option disabled selected value> Filtro erro 1 </option>
-                                        <option>Escolha de filtro 01</option>
-                                        <option>Escolha de filtro 02</option>
-                                        <option>Escolha de filtro 03</option>
-                                        <option>Escolha de filtro 04</option>
+                                    <label for="sel1">Status</label>
+                                    <select class="form-control" name="statusErro" id="statusErro">
+                                        <option disabled selected value> Selecione o status do erro </option>
+                                        <option>Pendente</option>
+                                        <option>Corrigido</option>
                                     </select>
                                 </div>
                                 <!--  Seleciona o segundo filtro -->
                                 <div class="form-group col-lg-4">
-                                    <label for="sel1">Filtro</label>
-                                    <select class="form-control" id="#">
-                                        <option disabled selected value> Filtro erro 2 </option>
+                                    <label for="sel1">Projeto</label>
+                                    <select class="form-control" name="nomeProjetos" id="nomeProjetos">
+                                        <option disabled selected value> Selecione o projeto </option>
                                         <option>Escolha de filtro 01</option>
                                         <option>Escolha de filtro 02</option>
                                         <option>Escolha de filtro 03</option>
                                         <option>Escolha de filtro 04</option>
                                     </select>
                                 </div>
+                                <script type="text/javascript">extrairNomes("#nomeProjetos")</script>
                                 <!-- Seleciona o terceiro filtro -->
                                 <div class="form-group col-lg-4">
-                                    <label for="sel1">Filtro</label>
-                                    <select class="form-control" id="#">
-                                        <option disabled selected value> Filtro erro 3 </option>
-                                        <option>Escolha de filtro 01</option>
-                                        <option>Escolha de filtro 02</option>
-                                        <option>Escolha de filtro 03</option>
-                                        <option>Escolha de filtro 04</option>
+                                    <label for="sel1">Tipo do Erro</label>
+                                    <select class="form-control" name="tipoErro" id="tipoErro">
+                                        <option disabled selected value> Selecione o tipo do erro </option>
+                                        <option>Interface</option>
+                                        <option>Erro de lógica</option>
+                                        <option>Erro de compilação</option>
+                                        <option>Erro de execução</option>
                                     </select>
                                 </div>
                                 <!-- Botão de Pesquisa -->
                                 <div class="form-group col-lg-12">
-                                    <button type="button" class="btn btn-primary rp" onclick="window.location.href='list.html'">Buscar</button>
+                                    <button type="submit" class="btn btn-primary rp">Buscar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <!-- Caso escolha o botão da esquerda -->
                     <div id="right">
-                        <form role="form" name="projectsearch" id="projectsearch">
+                        <form role="form" name="projectsearch" id="projectsearch" method="GET" action="listaProjetos.php">
                             <div class="row">
                                 <!-- Busca pelo nome do projeto -->
                                 <div class="form-group col-lg-12">
                                     <label for="nome" class="control-label">Pequise pelo nome do projeto</label>
-                                    <input type="text" name="nameProject" id="nameProject" class="form-control" placeholder="Deixe em branco para pesquisar todos os projetos">
+                                    <input type="text" name="nomeProjeto" id="nameProject" class="form-control" placeholder="Deixe em branco para pesquisar todos os projetos">
                                 </div>
                                 <!-- Seleciona o primeiro filtro -->
-                                <div class="form-group col-lg-4">
-                                    <label for="sel1">Filtro</label>
-                                    <select class="form-control" id="#">
-                                        <option disabled selected value> Filtro Projeto 1 </option>
-                                        <option>Escolha de filtro 01</option>
-                                        <option>Escolha de filtro 02</option>
-                                        <option>Escolha de filtro 03</option>
-                                        <option>Escolha de filtro 04</option>
+                                <div class="form-group col-lg-6">
+                                    <label for="sel1">Plataforma do Projeto</label>
+                                    <select class="form-control" id="plataformaProjeto" name="plataformaProjeto">
+                                        <option disabled selected value> Selecione a plataforma do projeto </option>
+                                        <option>Android</option>
+                                        <option>Desktop</option>
+                                        <option>WebSite</option>
                                     </select>
                                 </div>
                                 <!-- Seleciona o segundo filtro -->
-                                <div class="form-group col-lg-4">
-                                    <label for="sel1">Filtro</label>
-                                    <select class="form-control" id="#">
-                                        <option disabled selected value> Filtro Projeto 2 </option>
-                                        <option>Escolha de filtro 01</option>
-                                        <option>Escolha de filtro 02</option>
-                                        <option>Escolha de filtro 03</option>
-                                        <option>Escolha de filtro 04</option>
+                                <div class="form-group col-lg-6">
+                                    <label for="sel1">Tester do projeto</label>
+                                    <select class="form-control" id="testerProjeto" name="testerProjeto">
+                                        <option disabled selected value> Selecione o tester</option>
+                                        <option>Lucas Weber</option>
+                                        <option>Joao Paulo Costa</option>
+                                        <option>Matheus Barros</option>
                                     </select>
                                 </div>
                                 <!--  Botão de Pesquisa -->
                                 <div class="form-group col-lg-12">
-                                    <button type="button" class="btn btn-primary rp " onclick="window.location.href='list.html'">Buscar</button>
+                                    <button type="submit" class="btn btn-primary rp " >Buscar</button>
                                 </div>
                             </div>
                         </form>
