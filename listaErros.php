@@ -130,7 +130,7 @@
                                         <p>Cadastro</p>
                                         <span class="caret"></span>
                                     </a>
-                                    <ul class="dropdown-menu a-cores">
+                                    <ul class="">
                                         <li><a href="addError.html">Erros</a></li>
                                         <li><a href="addProject.html">Projetos</a></li>
                                     </ul>

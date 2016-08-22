@@ -555,6 +555,12 @@ div.panel.show {
     color: #CC1F3B;
 }
 
+.heart:hover {
+    transform: scale(3);
+    font-size: 45px;
+    transition: all .4s ease;
+}
+
 
 /* FOOTER FIM */
 
