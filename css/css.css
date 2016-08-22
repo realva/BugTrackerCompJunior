@@ -46,7 +46,11 @@ html {
 }
 
 .navi li {
-    margin: 20px;
+    margin: 10px;
+}
+
+.navi li.dropdown {
+    margin: 0 10px;
 }
 
 #navi-slide {
@@ -54,7 +58,7 @@ html {
     left: -250px;
     top: 75px;
     height: 0;
-    background: #1793A6;
+    background: #235a63;
     transition: left 0.4s linear;
     z-index: 100000;
 }
@@ -65,12 +69,16 @@ html {
     justify-content: space-between;
 }
 
+.mobile-brand button {
+    max-width: 60px;
+}
+
 .mobile-brand button span {
     background-color: white;
 }
 
 .mobile-brand button:hover span {
-    background-color: #cc1f3b;
+    opacity: .7;
 }
 
 .navbar-toggle {
