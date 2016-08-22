@@ -29,11 +29,11 @@ INSERT INTO erro (nome, tipo, status, descricao, projeto_idProjeto) VALUES ('Nom
 INSERT INTO erro (nome, tipo, status, descricao, projeto_idProjeto) VALUES ('NomeDoErro15', 'Interface', 'Pendente', 'PS2016', '2'); 
 INSERT INTO erro (nome, tipo, status, descricao, projeto_idProjeto) VALUES ('NomeDoErro16', 'Erro de execução', 'Pendente', 'PS2016', '2');
 
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao1', 'Solucao do erro 1', "NomeDesenvolvedor1", '1');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao2', 'Solucao do erro 4', "NomeDesenvolvedor2", '4');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao3', 'Solucao do erro 3', "NomeDesenvolvedor3", '3');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao4', 'Solucao do erro 10', "NomeDesenvolvedor4", '10');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao5', 'Solucao do erro 6', "NomeDesenvolvedor5", '6');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao6', 'Solucao do erro 14', "NomeDesenvolvedor6", '14');
-INSERT INTO solucao (nome, descricao, desenvolvedor, erro_idError) VALUES ('NomeSolucao7', 'Solucao do erro 5', "NomeDesenvolvedor7", '5');  
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 1', "Matheus Nogueira", '1');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 4', "Lucas de Paula", '4');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 3', "Arlen Mateus Mendes", '3');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 10', "Lucas de Paula", '10');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 6', "Matheus Nogueira", '6');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 14', "Matheus Nogueira", '14');
+INSERT INTO solucao (descricao, desenvolvedor, erro_idError) VALUES ('Solucao do erro 5', "Lucas Lopes Garcia", '5');  
 
