@@ -99,39 +99,65 @@
                 </div>
 
                 <div class="cont-down-header">
-                    <div class="text-center">
-                        <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
-                        Descrição do Erro</h3>
-                        <div class="panel">
-                            <!--  -->
-                            <textarea class="form-control" rows="6" id="descricaoErro" disabled></textarea>
+                    <div class="">
+                        <div class="hpanel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <div class="hpanel hpanel-default">
+                                <div class="hpanel-heading" role="tab" id="headingOne">
+                                    <h4 class="hpanel-title">
+					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<i class="more-less glyphicon glyphicon-plus"></i>
+						Descrição do Erro
+					</a>
+				</h4>
+                                </div>
+                                <div id="collapseOne" class="hpanel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="hpanel-body">
+                                        <textarea class="form-control" rows="5" id="descricaoErro" disabled></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                        <!-- panel-group -->
                     </div>
                     <div class="col-sm-12 space">
                         <label for="nameError" class="control-label">Nome do Erro</label>
                         <input type="text" name="nomeErro" id="nomeErro" class="form-control" placeholder="Erro de Interface" disabled>
 
                     </div>
-
-                    <h3 class="accordion"><span class="glyphicon glyphicon-triangle-right "></span><span class= "glyphicon glyphicon-triangle-bottom"></span>
-                        Detalhes do Erro</h3>
-                    <div class="panel">
-                        <div class="align">
-                            <div class="col-sm-12 space">
-                                <label>Projeto:</label>
-                                <input type="text" name="nomeProjeto" id="nomeProjeto" class="form-control" placeholder="SETI" disabled>
-                            </div>
-                            <div class="col-sm-12 space">
-                                <label>Tipo:</label>
-                                <input type="text" name="tipoErro" id="tipoErro" class="form-control" placeholder="Erro de Usabilidade" disabled>
-                            </div>
-                            <div class="col-sm-12 space">
-                                <label>Data:</label>
-                                <input type="text" name="dataErro" id="dataErro" class="form-control" placeholder="Date" onfocus="(this.type='date')" autofocus disabled>
+                    <div class="hpanel hpanel-default">
+                        <div class="hpanel-heading" role="tab" id="headingTwo">
+                            <h4 class="hpanel-title">
+					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						<i class="more-less glyphicon glyphicon-plus"></i>
+						Detalhes do Erro
+					</a>
+				</h4>
+                        </div>
+                        <div id="collapseTwo" class="hpanel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="hpanel-body">
+                                <div class="align">
+                                    <div class="col-sm-12 space">
+                                        <label>Projeto:</label>
+                                        <input type="text" name="nomeProjeto" id="nomeProjeto" class="form-control" placeholder="SETI" disabled>
+                                    </div>
+                                    <div class="col-sm-12 space">
+                                        <label>Tipo:</label>
+                                        <input type="text" name="tipoErro" id="tipoErro" class="form-control" placeholder="Erro de Usabilidade" disabled>
+                                    </div>
+                                    <div class="col-sm-12 space">
+                                        <label>Data:</label>
+                                        <input type="text" name="dataErro" id="dataErro" class="form-control" placeholder="Date" onfocus="(this.type='date')" autofocus disabled>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+
                 <div class="cont-cont">
                     <div class="col-sm-12">
                         <form role="form" name="solutionform" id="solutionform">
@@ -246,6 +272,15 @@
             $("#dataErro").val(data.data);
 
         });
+
+        function toggleIcon(e) {
+            $(e.target)
+                .prev('.hpanel-heading')
+                .find(".more-less")
+                .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.hpanel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.hpanel-group').on('shown.bs.collapse', toggleIcon);
     </script>
 </body>
 

@@ -478,12 +478,15 @@ h3.accordion:hover {
     background-color: #ddd;
 }
 
-h3.accordion.active + span.glyphicon-triangle-bottom {
-    display: inline-block;
-}
-
-h3.accordion.active + span.glyphicon-triangle-right {
-    display: none;
+h3.accordion:not(.active) span.glyphicon-triangle-right {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 
@@ -546,3 +549,43 @@ div.panel.show {
 
 
 /* FOOTER FIM */
+
+
+/*******************************
+* ACCORDION*
+*******************************/
+
+.hpanel-group .hpanel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.hpanel-default > .hpanel-heading {
+    padding: 0;
+    border-radius: 8px;
+    color: #212121;
+    background-color: #add4da;
+    border-color: #EEEEEE;
+}
+
+.hpanel-title {
+    font-size: 14px;
+}
+
+.hpanel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.hpanel-default > .hpanel-heading + .hpanel-collapse > .hpanel-body {
+    border-top-color: #EEEEEE;
+}
