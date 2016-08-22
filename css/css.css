@@ -494,6 +494,9 @@ div.panel {
     background-color: #f5f5f5;
     display: none;
     border: none;
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    opacity: 0;
 }
 
 
@@ -501,6 +504,9 @@ div.panel {
 
 div.panel.show {
     display: block;
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    opacity: 1;
 }
 
 

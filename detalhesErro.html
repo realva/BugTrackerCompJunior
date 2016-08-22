@@ -14,6 +14,10 @@
     <script type="text/javascript" src="js/js.js"></script>
     <script type="text/javascript" src="js/detalhes.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 
 <body>
@@ -80,7 +84,7 @@
         <!-- HEADER-FIM -->
 
         <!-- CONTEUDO -->
-        <main id="myMain" class="myMain">
+        <main id="myMain" class="myMain wow fadeIn">
             <div class="conte-detalhes">
                 <div class="cont-header">
 
@@ -132,8 +136,8 @@
                         <div class="fullscree" id="noSolution">
                             <h6 class="recoil">Adicionar Solução</h6>
                             <button onclick="window.location.href='addSolution.html'" class="addSoluc btn-primary rp" id="btnSolucao"><span class="glyphicon glyphicon-plus"></span></button>
-                        </div>             
-                    </div>                                    
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -159,21 +163,20 @@
         }
     </script>
     <script>
-        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function(data){
+        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function (data) {
             $("#descricaoErro").val(data.descricao);
             $("#nomeErro").val(data.nomeErro);
             $("#nomeProjeto").val(data.nomeProjeto);
             $("#tipoErro").val(data.tipo);
             $("#dataErro").val(data.data);
-            if(data.solucao){
+            if (data.solucao) {
                 $("#solucaoErro").val(data.solucao);
                 $("#noSolution").hide();
-            }
-            else{
+            } else {
                 $("#solution").hide();
-                $("#btnSolucao").attr('onclick', "window.location.href='addSolution.html?id="+query().id+"'");
+                $("#btnSolucao").attr('onclick', "window.location.href='addSolution.html?id=" + query().id + "'");
             }
-            
+
         });
     </script>
 </body>

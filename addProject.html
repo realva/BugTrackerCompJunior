@@ -18,7 +18,11 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <!--Referência para o Sweetalert 2-->
     <link href="css/sweetalert2.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </head>
 
@@ -87,7 +91,7 @@
         <!-- HEADER-FIM -->
 
         <!-- CONTEUDO -->
-        <main id="myMain" class="myMain">
+        <main id="myMain" class="myMain wow fadeIn">
             <!-- Section para cadastro de projetos. -->
             <section id="sectionCadastro" class="container-fluid">
                 <h2 class="intro-text text-center">
@@ -117,8 +121,8 @@
                                 <option disabled selected value> Selecione o tester da equipe </option>
                                 <option>Lucas Weber</option>
                                 <option>Joao Paulo Costa</option>
-                                <option>Matheus Barros</option> 
-                                <option>Lucas de Paula</option> 
+                                <option>Matheus Barros</option>
+                                <option>Lucas de Paula</option>
                             </select>
                         </div>
                         <!-- Faz uma breve descrição a cerca do projeto -->
@@ -171,32 +175,32 @@
                         platform: platform,
                         tester: tester
                     },
-                    url: 'php/bdCadastrarProjeto.php', 
+                    url: 'php/bdCadastrarProjeto.php',
 
-                    success: function(data) {
+                    success: function (data) {
 
                         swal({
-                        title: 'O projeto ' + nomeProjeto + ' foi cadastrado com sucesso',
-                        //text: 'Sucesso',
-                        type: 'success',
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'OK'
+                            title: 'O projeto ' + nomeProjeto + ' foi cadastrado com sucesso',
+                            //text: 'Sucesso',
+                            type: 'success',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
                         }, function () {
-                        window.location.reload();
+                            window.location.reload();
                         });
                     },
-                    error: function(xhr, status, error) {
-                        
+                    error: function (xhr, status, error) {
+
                         swal({
-                        title: 'O projeto não pode ser cadastrado',
-                        text: xhr.responseText,
-                        type: 'error',
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'OK'
+                            title: 'O projeto não pode ser cadastrado',
+                            text: xhr.responseText,
+                            type: 'error',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
                         });
                     }
 
-                });        
+                });
             } else {
                 $("#projectform").submit(); // tenta o submit no form, com isso a validacao de campo é chamada automaticamente
             }

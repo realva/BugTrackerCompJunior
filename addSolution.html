@@ -14,11 +14,15 @@
     <link href="css/css.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/js.js"></script> 
-    <script type="text/javascript" src="js/detalhes.js"></script> 
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/detalhes.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href="css/sweetalert2.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </head>
 
@@ -86,7 +90,7 @@
         <!-- HEADER-FIM -->
 
         <!-- CONTEUDO -->
-        <main id="myMain" class="myMain">
+        <main id="myMain" class="myMain wow fadeIn">
 
             <div class="conte-detalhes">
                 <div class="cont-header">
@@ -180,7 +184,7 @@
 
             var dev = $("#dev").val(); // nome do desenvolvedor que irá solucionar o erro.
             var solucao = $("#solucao").val(); // descricao da solucao do erro.
-            
+
             if (dev != "" && solucao != "") {
 
                 // requisicao via AJAX
@@ -188,36 +192,36 @@
 
                     type: 'post',
                     data: {
-                        dev : dev,
-                        solucao : solucao,
-                        id : query().id
+                        dev: dev,
+                        solucao: solucao,
+                        id: query().id
                     },
-                    url: 'php/bdCadastrarSolucao.php', 
+                    url: 'php/bdCadastrarSolucao.php',
 
-                        success: function(data){
+                    success: function (data) {
 
-                            swal({
-                                title: 'A solução encontrada por ' + dev + ' foi cadastrada com sucesso',
-                                //text: 'Sucesso',
-                                type: 'success',
-                                confirmButtonColor: '#3085d6',
-                                confirmButtonText: 'OK'
-                            }, function () {
-                                window.location.reload();
-                            });
-                        },
-                        error: function(xhr, status, error) {
-                        
                         swal({
-                        title: 'A solução não pode ser cadastrada',
-                        text: xhr.responseText,
-                        type: 'error',
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'OK'
+                            title: 'A solução encontrada por ' + dev + ' foi cadastrada com sucesso',
+                            //text: 'Sucesso',
+                            type: 'success',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
+                        }, function () {
+                            window.location.reload();
+                        });
+                    },
+                    error: function (xhr, status, error) {
+
+                        swal({
+                            title: 'A solução não pode ser cadastrada',
+                            text: xhr.responseText,
+                            type: 'error',
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK'
                         });
                     }
 
-                });       
+                });
             } else {
                 $("#solutionform").submit(); // tenta o submit no form, com isso a validacao de campo é chamada automaticamente
             }
@@ -234,13 +238,13 @@
         }
     </script>
     <script>
-        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function(data){
+        $.getJSON("php/buscarDetalhes.php?id=" + query().id, null, function (data) {
             $("#descricaoErro").val(data.descricao);
             $("#nomeErro").val(data.nomeErro);
             $("#nomeProjeto").val(data.nomeProjeto);
             $("#tipoErro").val(data.tipo);
             $("#dataErro").val(data.data);
-            
+
         });
     </script>
 </body>

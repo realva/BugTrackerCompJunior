@@ -19,6 +19,10 @@
     <script type="text/javascript" src="js/js.js"></script>
     <script type="text/javascript" src="js/extrairNomes.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 
 <body>
@@ -86,7 +90,7 @@
         <!-- HEADER-FIM -->
 
         <!-- CONTEUDO -->
-        <main id="myMain" class="myMain">
+        <main id="myMain" class="myMain wow fadeIn">
             <div class="cont">
                 <div id="tabs">
                     <ul class="switch switch-li">
@@ -132,7 +136,9 @@
                                         <option>Escolha de filtro 04</option>
                                     </select>
                                 </div>
-                                <script type="text/javascript">extrairNomes("#nomeProjetos")</script>
+                                <script type="text/javascript">
+                                    extrairNomes("#nomeProjetos")
+                                </script>
                                 <!-- Seleciona o terceiro filtro -->
                                 <div class="form-group col-lg-4">
                                     <label for="sel1">Tipo do Erro</label>
@@ -182,7 +188,7 @@
                                 </div>
                                 <!--  Botão de Pesquisa -->
                                 <div class="form-group col-lg-12">
-                                    <button type="submit" class="btn btn-primary rp " >Buscar</button>
+                                    <button type="submit" class="btn btn-primary rp ">Buscar</button>
                                 </div>
                             </div>
                         </form>
