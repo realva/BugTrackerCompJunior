@@ -91,7 +91,6 @@
                 $query = "Select * FROM projeto";
                 $data = mysqli_query($mysqli, $query);
                 $line = mysqli_affected_rows ($mysqli);
-
             ?>
 
             <div class="page-header text-center">

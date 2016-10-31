@@ -87,14 +87,10 @@
         <main id="myMain" class="myMain">
 
             <?php
-                ini_set('date.timezone', 'America/Sao_paulo');
                 include("PHP/connect.php");
                 $query = "Select * FROM projeto";
                 $data = mysqli_query($mysqli, $query);
                 $line = mysqli_affected_rows ($mysqli);
-
-                $datade = date('y/m/d');
-                echo "$datade";
             ?>
 
             <div class="page-header text-center">
@@ -121,7 +117,8 @@
                                             echo "<tr>";
                                             echo "<td>".$line['idProjeto']."</td>";
                                             echo "<td>".$line['nome']."</td>";
-                                            echo "<td>".$line['data']."</td>";
+                                            echo "<td>".$line['descricao']."</td>";
+                                            echo "<td>".$line['tester']."</td>";
                                             echo "</tr>";
                                         }
                                     ?>
